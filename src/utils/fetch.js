@@ -12,7 +12,7 @@ export const getProducts = async (limit=10) => {
 
 export const getProductById = async (productId) => {
     const baseUrl = 'https://fakestoreapi.com/products'
-    const url = `${baseUrl}/products/${productId}`
+    const url = `${baseUrl}/${productId}`
     const res = await fetch(url);
     const data = await res.json();
     return data;

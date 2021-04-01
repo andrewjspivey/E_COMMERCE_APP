@@ -8,14 +8,14 @@ import {ProductContext} from '../../contexts/ProductContext';
 
 const ProductList = () => {
     const { products } = useContext(ProductContext)
-    // const [allProducts, setAllProducts] = products;
+    const [allProducts] = products;
 
     const history = useHistory();
 
     return (
     <div>
         <Grid container justify="center" spacing={4}>
-                {products.map((product) => (
+                {allProducts.map((product) => (
                     <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
                         <ProductCard product={product} />
                     </Grid>

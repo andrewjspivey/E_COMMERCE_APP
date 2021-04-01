@@ -6,7 +6,7 @@ import {ProductContext} from "../ProductContext";
 
 const ProductProvider = ({children}) => {
     const [products, setProducts] = useState([]);
-    const [showProduct, setShowProduct] = useState([]);
+    const [showProduct, setShowProduct] = useState(null);
 
 
     const fetchProducts = async () => {
@@ -18,15 +18,15 @@ const ProductProvider = ({children}) => {
         const products = fetchProducts();
         console.log(products)
     }, []);
+    console.log(products)
 
-
-    const ShowProduct = async (productId) => {
+    const selectProduct = async (productId) => {
         const product = await getProductById(productId)
         setShowProduct(product)
     }
 
     return (
-        <ProductContext.Provider value={{ products: [products, setProducts], showProduct: [showProduct, setShowProduct], fetchProducts, ShowProduct }}>
+        <ProductContext.Provider value={{ products: [products, setProducts], showProduct: [showProduct, setShowProduct], fetchProducts, selectProduct }}>
             {children}
         </ProductContext.Provider>
     );
