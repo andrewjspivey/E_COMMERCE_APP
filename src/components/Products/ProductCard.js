@@ -4,9 +4,9 @@ import {AddShoppingCart} from '@material-ui/icons';
 import {Link} from 'react-router-dom'
 
 
-const ProductCard = ({product, onClick}) => {
+const ProductCard = ({product}) => {
     return (
-    <Card className="card" onClick={onClick}>
+    <Card className="card" >
         <CardMedia className="card-media" image={product.image} title={product.title}/>
         <CardContent>
             <div className="card-content">
