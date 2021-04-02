@@ -14,11 +14,25 @@ const CartPage = () => {
 
 
 
+   // <ProductCard key={product.id} product={product} />
 
     return (
         <>
         {cart.map((product, index) => 
-            <ProductCard key={product.id} product={product} />
+            <Card className={classes.root}>
+            <CardMedia className={classes.media} image={product.image} title={product.title} />
+            <CardContent>
+                <div className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                    {product.title}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="h2">
+                    ${product.price}
+                    </Typography>
+                </div>
+                <Typography variant="body2" color="textSecondary" component="p" />
+            </CardContent>
+            </Card>
         )}
     </>
     )
