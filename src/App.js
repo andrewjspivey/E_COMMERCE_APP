@@ -4,23 +4,30 @@ import ProductList from './components/Products/ProductList';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ShowProductPage from './components/Products/ShowProductPage';
 import ProductProvider from './contexts/providers/ProductProvider'
+import CartProvider from './contexts/providers/CartProvider'
+import CartPage from './components/cart/CartPage'
+
 
 const App = () => {
-
     return (
         <ProductProvider>
-        <Router>
-          <Switch>
-            <Route exact path='/'>
-              <ProductList />
-            </Route>
-            <Route exact path='/products/:id'>
-              <ShowProductPage />
-            </Route>
-          </Switch>
-        </Router>
+            <CartProvider>
+                <Router>
+                    <Switch>
+                    <Route exact path='/'>
+                        <ProductList />
+                    </Route>
+                    <Route exact path='/products/:id'>
+                        <ShowProductPage />
+                    </Route>
+                    <Route exact path='/cart'>
+                        <CartPage />
+                    </Route>
+                    </Switch>
+                </Router>
+            </CartProvider>
         </ProductProvider>
-      );
+        );
     }
 
 

@@ -7,17 +7,16 @@ import {useContext} from 'react';
 import {ProductContext} from '../../contexts/ProductContext';
 
 const ProductList = () => {
-    const { products } = useContext(ProductContext)
-    const [allProducts] = products;
+    const {products} = useContext(ProductContext)
 
     const history = useHistory();
-
+    
     return (
-    <div>
+    <div style={{margin: '4rem'}}>
         <Grid container justify="center" spacing={4}>
-                {allProducts.map((product) => (
+                {products.map((product, index) => (
                     <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
-                        <ProductCard product={product} />
+                        <ProductCard product={product} onClick={() => history.push(`/products/${index}`)}/>
                     </Grid>
                 ))}
         </Grid>

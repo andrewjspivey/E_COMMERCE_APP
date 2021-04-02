@@ -4,27 +4,32 @@ import {AddShoppingCart} from '@material-ui/icons';
 import {Link} from 'react-router-dom'
 import { useContext } from 'react';
 import { ProductContext } from '../../contexts/ProductContext'
+import useStyles from './ProductCardStyles';
+import CartProvider from '../../contexts/providers/CartProvider';
 
-const ProductCard = ({product}) => {
 
-    const {selectProduct} = useContext(ProductContext)
-    
+
+const ProductCard = ({product, onClick}) => {
+    const classes = useStyles();
+
 
     return (
-    <Card className="card" onClick={selectProduct(product.id)}>
-        <CardMedia className="card-media" image={product.image} title={product.title} />
+
+    <Card className={classes.root}>
+        <CardMedia className={classes.media} image={product.image} title={product.title} onClick={onClick} />
         <CardContent>
-            <div className="card-content">
-                <Typography variant="h5" gutterBottom>
-                    {product.title}
+            <div className={classes.cardContent}>
+                <Typography gutterBottom variant="h5" component="h2">
+                {product.title}
                 </Typography>
-                <Typography variant="h5">
-                    ${product.price}
+                <Typography gutterBottom variant="h5" component="h2">
+                ${product.price}
                 </Typography>
             </div>
+            <Typography variant="body2" color="textSecondary" component="p" />
         </CardContent>
-        <CardActions className="card-actions">
-            <IconButton aria-label="Add to Cart">
+        <CardActions disableSpacing className={classes.cardActions}>
+            <IconButton aria-label="Add to Cart" >
                 <AddShoppingCart />
             </IconButton>
         </CardActions>

@@ -6,7 +6,6 @@ import {ProductContext} from "../ProductContext";
 
 const ProductProvider = ({children}) => {
     const [products, setProducts] = useState([]);
-    const [showProduct, setShowProduct] = useState(null);
 
 
     const fetchProducts = async () => {
@@ -16,17 +15,16 @@ const ProductProvider = ({children}) => {
 
     useEffect(() => {
         const products = fetchProducts();
-        console.log(products)
     }, []);
-    console.log(products)
 
-    const selectProduct = async (productId) => {
-        const product = await getProductById(productId)
-        setShowProduct(product)
-    }
+
+    // const fetchSingleProduct = async (productId) => {
+    //     const product = await getProductById(productId)
+    //     setSingleProduct(product)
+    // }
 
     return (
-        <ProductContext.Provider value={{ products: [products, setProducts], showProduct: [showProduct, setShowProduct], fetchProducts, selectProduct }}>
+        <ProductContext.Provider value={{products, fetchProducts}}>
             {children}
         </ProductContext.Provider>
     );
