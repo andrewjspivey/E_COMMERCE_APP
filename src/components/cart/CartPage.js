@@ -10,7 +10,7 @@ import {Link} from 'react-dom'
 const CartPage = () => {
     const classes = useStyles();
 
-    const {cart} = useContext(CartContext);
+    const {cart, removeCartItem} = useContext(CartContext);
 
 
     return (
@@ -21,7 +21,7 @@ const CartPage = () => {
             <CardContent>
                 <div className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                    {product.title}
+                    {product.title} X {product.quantity}
                     </Typography>
                     <Typography gutterBottom variant="h5" component="h2">
                     ${product.price}
@@ -29,6 +29,7 @@ const CartPage = () => {
                 </div>
                 <Typography variant="body2" color="textSecondary" component="p" />
             </CardContent>
+            <button onClick={() => removeCartItem(product)}></button>
             </Card>
         )}
     </>
