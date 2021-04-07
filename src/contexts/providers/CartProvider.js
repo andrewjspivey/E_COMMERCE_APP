@@ -7,11 +7,9 @@ import {CartContext} from '../CartContext'
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
 
-
     const addToCart = (product) => {
         setCart([...cart, product])
     }
-
 
 
     return (

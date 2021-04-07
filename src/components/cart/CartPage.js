@@ -13,9 +13,6 @@ const CartPage = () => {
     const {cart} = useContext(CartContext);
 
 
-
-   // <ProductCard key={product.id} product={product} />
-
     return (
         <>
         {cart.map((product, index) => 
