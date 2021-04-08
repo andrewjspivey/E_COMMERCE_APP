@@ -12,7 +12,11 @@ const ProductList = () => {
     const history = useHistory();
     
     return (
-    <div style={{margin: '4rem'}}>
+    <>
+    <div style={{display: 'flex', justifyContent: 'center'}}>
+        <h1>Products</h1>
+    </div>
+    <div style={{marginLeft: '4rem', marginRight: '4rem'}}>
         <Grid container justify="center" spacing={4}>
                 {products.map((product, index) => (
                     <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
@@ -21,6 +25,7 @@ const ProductList = () => {
                 ))}
         </Grid>
     </div>
+    </>
     )
 }
 
