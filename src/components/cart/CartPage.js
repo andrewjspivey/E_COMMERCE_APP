@@ -4,14 +4,14 @@ import {CartContext} from '../../contexts/CartContext'
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton, Grid, Button } from '@material-ui/core';
 import useStyles from './CartPageStyles';
 import ProductCard from "../Products/ProductCard"
-import {Link} from 'react-dom'
+import {Link} from 'react-router-dom'
 import RemoveIcon from '@material-ui/icons/Remove';
 import AddIcon from '@material-ui/icons/Add';
 
 const CartPage = () => {
     const classes = useStyles();
 
-    const {cart, addToCart, removeCartItem, cartPriceTotal} = useContext(CartContext);
+    const {cart, addToCart, removeCartItem, cartPriceTotal, emptyCart} = useContext(CartContext);
 
 
     return (
@@ -56,8 +56,10 @@ const CartPage = () => {
             <h1>Cart Subtotal: ${cartPriceTotal(cart)}</h1>
         </div>
         <div className={classes.buttons}>
-            <Button size='large' type='button' variant='contained' color='secondary' >Empty Cart</Button>
+            <Button onClick={() => emptyCart(cart)} size='large' type='button' variant='contained' color='secondary' >Empty Cart</Button>
+                <Link to='/checkout'>
             <Button size='large' type='button' variant='contained' color='primary' >Checkout</Button>
+                </Link>
         </div>
         </>
     )

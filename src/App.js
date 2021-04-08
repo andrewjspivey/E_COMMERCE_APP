@@ -7,6 +7,8 @@ import ProductProvider from './contexts/providers/ProductProvider'
 import CartProvider from './contexts/providers/CartProvider'
 import CartPage from './components/cart/CartPage'
 import Navbar from './components/Navbar/Navbar'
+import CheckoutPage from './components/Checkout/CheckoutPage'
+import Checkout from './components/Checkout/Checkout'
 import {useContext} from 'react'
 import { CartContext } from './contexts/CartContext';
 
@@ -29,6 +31,10 @@ const App = () => {
                     <Route exact path='/cart'>
                         <Navbar />
                         <CartPage />
+                    </Route>
+                    <Route exact path='/checkout'>
+                        <Navbar />
+                        <CheckoutPage />
                     </Route>
                     </Switch>
                 </Router>

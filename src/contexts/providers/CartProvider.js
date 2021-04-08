@@ -43,8 +43,12 @@ const CartProvider = ({children}) => {
         return +(total.toFixed(2))
     }
 
+    const emptyCart = () => {
+        setCart([])
+    }
+
     return (
-        <CartContext.Provider value={{cart, addToCart, removeCartItem, cartNumber, cartPriceTotal}}>
+        <CartContext.Provider value={{cart, addToCart, removeCartItem, cartNumber, cartPriceTotal, emptyCart}}>
             {children}
         </CartContext.Provider>
     );
