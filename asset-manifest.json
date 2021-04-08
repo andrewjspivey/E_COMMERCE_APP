@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/E_COMMERCE_APP/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/E_COMMERCE_APP/static/js/main.dc20793c.chunk.js",
+    "main.js.map": "/E_COMMERCE_APP/static/js/main.dc20793c.chunk.js.map",
+    "runtime-main.js": "/E_COMMERCE_APP/static/js/runtime-main.6d5e1b70.js",
+    "runtime-main.js.map": "/E_COMMERCE_APP/static/js/runtime-main.6d5e1b70.js.map",
+    "static/js/2.36417004.chunk.js": "/E_COMMERCE_APP/static/js/2.36417004.chunk.js",
+    "static/js/2.36417004.chunk.js.map": "/E_COMMERCE_APP/static/js/2.36417004.chunk.js.map",
+    "static/js/3.3e94c14e.chunk.js": "/E_COMMERCE_APP/static/js/3.3e94c14e.chunk.js",
+    "static/js/3.3e94c14e.chunk.js.map": "/E_COMMERCE_APP/static/js/3.3e94c14e.chunk.js.map",
+    "index.html": "/E_COMMERCE_APP/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/E_COMMERCE_APP/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.36417004.chunk.js.LICENSE.txt": "/E_COMMERCE_APP/static/js/2.36417004.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d5e1b70.js",
+    "static/js/2.36417004.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.dc20793c.chunk.js"
+  ]
+}
