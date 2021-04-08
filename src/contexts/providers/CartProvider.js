@@ -27,9 +27,24 @@ const CartProvider = ({children}) => {
         }
     }
 
+    const cartNumber = () => {
+        let count = 0;
+        for (let i = 0; i < cart.length; i++) {
+            count += cart[i].quantity
+        }
+        return count;
+    }
+    
+    const cartPriceTotal = () => {
+        let total = 0;
+        for (let i = 0; i < cart.length; i++) {
+            total += cart[i].price * cart[i].quantity
+        }
+        return +(total.toFixed(2))
+    }
 
     return (
-        <CartContext.Provider value={{cart, addToCart, removeCartItem}}>
+        <CartContext.Provider value={{cart, addToCart, removeCartItem, cartNumber, cartPriceTotal}}>
             {children}
         </CartContext.Provider>
     );

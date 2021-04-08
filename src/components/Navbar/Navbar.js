@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { AppBar, Toolbar, IconButton, Badge, Typography } from '@material-ui/core';
 import {ShoppingCart} from '@material-ui/icons';
 import {useContext} from 'react'
@@ -9,6 +8,7 @@ import {Link} from 'react-router-dom'
 const Navbar = () => {
 
     const cart = useContext(CartContext)
+    const {cartNumber} = useContext(CartContext)
 
 
     return (
@@ -19,7 +19,7 @@ const Navbar = () => {
                 </Link>
                 <Link to={'/cart'} style={{ color: '#FFF', textDecoration: 'none' }} >
                     <IconButton color="inherit">
-                        <Badge badgeContent={cart.cart.length} color="secondary">
+                        <Badge badgeContent={cartNumber(cart)} color="secondary">
                             <ShoppingCart />
                         </Badge>
                     </IconButton>

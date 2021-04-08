@@ -10,10 +10,15 @@ export default makeStyles(() => ({
 },
   cardActions: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
 },
   cardContent: {
     display: 'flex',
     justifyContent: 'space-between',
 },
+  buttons: {
+    display: 'flex',
+    margin: '2rem',
+    justifyContent: 'space-evenly',
+}
 }));
