@@ -1,10 +1,8 @@
 import {React, useState, useContext, useEffect } from 'react';
 import {useParams} from 'react-router-dom'
 import { ProductContext } from '../../contexts/ProductContext'
-import ProductCard from './ProductCard'
-import { getProductById, getProducts } from '../../utils/fetch'
 import {CartContext} from '../../contexts/CartContext'
-import { Grid, Typography, Divider, Button, Box, IconButton} from "@material-ui/core"
+import { Typography, Button, Box, } from "@material-ui/core"
 import useStyles from './ShowProductStyles';
 
 

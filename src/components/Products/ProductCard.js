@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } from '@material-ui/core';
 import {AddShoppingCart} from '@material-ui/icons';
 import { useContext } from 'react';
-import { ProductContext } from '../../contexts/ProductContext'
 import useStyles from './ProductCardStyles';
 import {CartContext} from '../../contexts/CartContext';
 

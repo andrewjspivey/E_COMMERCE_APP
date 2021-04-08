@@ -1,9 +1,7 @@
 import {React, useState, useContext, useEffect } from 'react';
-import {useParams} from 'react-router-dom'
 import {CartContext} from '../../contexts/CartContext'
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton, Grid, Button } from '@material-ui/core';
 import useStyles from './CartPageStyles';
-import ProductCard from "../Products/ProductCard"
 import {Link} from 'react-router-dom'
 import RemoveIcon from '@material-ui/icons/Remove';
 import AddIcon from '@material-ui/icons/Add';
